@@ -2,6 +2,11 @@ crumb :root do
   link "Home", root_path
 end
 
+crumb :album do |album|
+  link album.title, album
+  parent :root
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
