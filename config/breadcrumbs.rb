@@ -1,10 +1,15 @@
 crumb :root do
-  link "Home", root_path
+  link 'Home', root_path
 end
 
 crumb :album do |album|
   link album.title, album
   parent :root
+end
+
+crumb :edit_album do |album|
+  link "Edit #{album.title}", album
+  parent :album, album
 end
 
 # crumb :projects do
